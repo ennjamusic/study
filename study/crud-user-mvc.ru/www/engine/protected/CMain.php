@@ -13,7 +13,7 @@ class CMain {
     }
 
     public static function redirect($link) {
-        header("Location: ".$link);
+        header("Location: ".$link."\n");
     }
 
     public static function getLink($linkArray) {
@@ -23,4 +23,15 @@ class CMain {
         }
         return $link;
     }
-} 
+
+    public static function getTranslate($key) {
+
+        return;
+    }
+
+    public static function getTemplate($key) {
+
+        return;
+    }
+
+}

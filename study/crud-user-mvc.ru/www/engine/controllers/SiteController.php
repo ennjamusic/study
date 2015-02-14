@@ -11,9 +11,11 @@ class SiteController extends CController {
                 global $errMessages;
                 global $langArray;
                 $errMessages[] = $langArray["accessDenied"];
+//                $model->logout();
             } else {
                 $link = CMain::getLink(array("controller"=>"user",
                                             "view"=>"index"));
+//                debug($link);
                 CMain::redirect($link);
             }
         }
@@ -25,7 +27,7 @@ class SiteController extends CController {
     }
 
     public function registerAction($userInfoArray) {
-        $model = new CModelConnectDB(DSN,DB_USER_NAME,DB_USER_PASS);
+
     }
 
 } 

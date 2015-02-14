@@ -9,9 +9,8 @@ function __autoload($className) {
         }
     } elseif(strstr($className,"Model")) {
         if(!file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/models/".$className.'.php')) {
-            die("asdasd");
+            die();
         } else {
-//            echo $className;
             include_once $_SERVER["DOCUMENT_ROOT"]."/engine/models/".$className.'.php';
         }
     }
@@ -25,11 +24,10 @@ function filterGetValue($var) {
     return trim(strip_tags(addslashes($var)));
 }
 
-new CModelConnectDB(DSN,DB_USER_NAME,DB_USER_PASS);
+//new CModelConnectDB(DSN,DB_USER_NAME,DB_USER_PASS);
 
 session_start();
 
-global $db;
 global $langArray;
 global $errMessages;
 //echo $_SERVER["DOCUMENT_ROOT"].LANG_PATH;

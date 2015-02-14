@@ -11,8 +11,10 @@ class CModel {
     }
 
     public function __construct() {
-        $db = new CModelConnectDB(DSN,DB_USER_NAME,DB_USER_PASS);
-        $this->setDbConn($db->getDBConnection());
+//        $db = new CModelConnectDB();
+        if($db = CModelConnectDB::getInstance()) {
+            $this->setDbConn($db);
+        }
     }
 
     public function create($elemInfoArray) {
