@@ -1,19 +1,24 @@
 body {
     /*background-color: #909aa2;*/
-    background: radial-gradient(circle farthest-side at 650px 380px, #b4bb2a, #875029);
+    background: radial-gradient(circle farthest-side at 650px 380px, #adbb16, #a0451a);
     min-height: 600px;
+}
+
+ul * {
+    margin: 0;
+    padding: 0;
 }
 
 .column1 {
     float: right;
-    width: 10%;
+    width: 15%;
     margin-top: 50px;
     background-color: seashell;
 }
 
 .column2 {
     float: left;
-    width: 89%;
+    width: 84%;
 }
 
 .loginForm {

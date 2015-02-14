@@ -22,26 +22,7 @@
     <favorites_list name="crud-user-mvc.ru" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="SiteController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/www/engine/controllers/SiteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="-17.346153" vertical-offset="42" max-vertical-offset="646">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMain.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/engine/protected/CMain.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="681" selection-end="681" vertical-scroll-proportion="0.6611296" vertical-offset="27" max-vertical-offset="714">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -51,32 +32,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/www/engine/protected/epilog.php" />
         <option value="$PROJECT_DIR$/www/engine/templates/default/index/view.php" />
         <option value="$PROJECT_DIR$/www/engine/controllers/User.php" />
         <option value="$PROJECT_DIR$/www/engine/templates/default/index.php" />
         <option value="$PROJECT_DIR$/www/index.php" />
         <option value="$PROJECT_DIR$/www/engine/templates/default/footer.php" />
-        <option value="$PROJECT_DIR$/www/engine/templates/default/header.php" />
         <option value="$PROJECT_DIR$/www/engine/models/User.php" />
         <option value="$PROJECT_DIR$/www/engine/templates/default/user/login.php" />
-        <option value="$PROJECT_DIR$/www/engine/protected/prolog.php" />
-        <option value="$PROJECT_DIR$/www/engine/protected/CController.php" />
         <option value="$PROJECT_DIR$/www/engine/templates/default/user/create.php" />
         <option value="$PROJECT_DIR$/www/engine/templates/default/user/view.php" />
-        <option value="$PROJECT_DIR$/www/engine/templates/default/css/style.css" />
-        <option value="$PROJECT_DIR$/www/engine/templates/newTemplate/css/style.css" />
-        <option value="$PROJECT_DIR$/www/engine/protected/config/config.php" />
-        <option value="$PROJECT_DIR$/www/engine/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/www/engine/templates/default/user/viewList.php" />
         <option value="$PROJECT_DIR$/www/engine/lang/en/lang.php" />
         <option value="$PROJECT_DIR$/www/engine/lang/ru/lang.php" />
         <option value="$PROJECT_DIR$/www/engine/models/UserModel.php" />
         <option value="$PROJECT_DIR$/www/engine/protected/autoload.php" />
-        <option value="$PROJECT_DIR$/www/engine/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/www/engine/protected/CModel.php" />
         <option value="$PROJECT_DIR$/www/engine/protected/CModelConnectDB.php" />
         <option value="$PROJECT_DIR$/www/engine/protected/CMain.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/newTemplate/my/index.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/newTemplate/book/index.php" />
+        <option value="$PROJECT_DIR$/www/engine/controllers/BookController.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/CController.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/newTemplate2/css/style.css" />
+        <option value="$PROJECT_DIR$/www/index.xml" />
+        <option value="$PROJECT_DIR$/www/engine/protected/CCache.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/CMemcache.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/template1/css/style.css" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/lang/en/lang.xml" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/views/my/index.php" />
+        <option value="$PROJECT_DIR$/www/engine/controllers/MyController.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/lang/en/lang.json" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/views/user/login.php" />
+        <option value="$PROJECT_DIR$/www/engine/models/TranslateModel.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/views/site/settings.php" />
+        <option value="$PROJECT_DIR$/www/engine/models/SiteModel.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/config/settings.json" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/views/translate/changeTranslate.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/views/user/create.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/views/user/view.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/views/user/viewList.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/config/config.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/core/autoload.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/prolog.php" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/css/style.css" />
+        <option value="$PROJECT_DIR$/www/engine/templates/newTemplate/css/style.css" />
+        <option value="$PROJECT_DIR$/www/engine/templates/default/header.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/core/CCache.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/core/CMemcache.php" />
+        <option value="$PROJECT_DIR$/www/engine/protected/core/CMain.php" />
+        <option value="$PROJECT_DIR$/www/engine/controllers/SiteController.php" />
+        <option value="$PROJECT_DIR$/www/engine/controllers/TranslateController.php" />
+        <option value="$PROJECT_DIR$/www/engine/controllers/UserController.php" />
       </list>
     </option>
   </component>
@@ -113,7 +119,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,105 +210,10 @@
               <option name="myItemId" value="engine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud-user-mvc.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud-user-mvc.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="protected" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud-user-mvc.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud-user-mvc.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud-user-mvc.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud-user-mvc.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lang" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud-user-mvc.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crud-user-mvc.ru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -314,16 +224,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="P:\home\crud-user-mvc.ru\www\engine\templates" />
+      <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\default\lang\ru" />
       <recent name="P:\home\crud-user-mvc.ru\www\engine\lang\ru" />
       <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\default\user" />
       <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\default" />
-      <recent name="P:\home\crud-user-mvc.ru\www\engine\controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\default\img" />
-      <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\default\site" />
       <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\default" />
-      <recent name="P:\home\crud-user-mvc.ru\www\engine\models" />
+      <recent name="P:\home\crud-user-mvc.ru\www\engine\protected\core" />
+      <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\default\views" />
+      <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\newTemplate\views" />
+      <recent name="P:\home\crud-user-mvc.ru\www\engine\templates\default\img" />
     </key>
   </component>
   <component name="RunManager">
@@ -351,17 +262,37 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27870092" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28247735" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -369,11 +300,11 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -397,63 +328,22 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/www/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="39" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/prolog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="323">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/controllers/SiteController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="25" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="425">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="53" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" vertical-offset="78" max-vertical-offset="680">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/user/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/index.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="2" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CController.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="28" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/site/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CModelConnectDB.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CModelConnectDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="32" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1632" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/autoload.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="884">
           <folding />
@@ -472,24 +362,19 @@
         <state line="4" column="11" selection-start="136" selection-end="136" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="238" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CController.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="28" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/site/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CModelConnectDB.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CModelConnectDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="32" selection-start="1157" selection-end="1157" vertical-scroll-proportion="0.0" vertical-offset="1190" max-vertical-offset="1632" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/autoload.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="884">
           <folding />
@@ -508,19 +393,19 @@
         <state line="2" column="22" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="136" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CController.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="9" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="204">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CModelConnectDB.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CModelConnectDB.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="18" selection-start="674" selection-end="674" vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="663" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/autoload.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="10" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="816">
           <folding />
@@ -539,11 +424,6 @@
         <state line="3" column="73" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="153" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/lang/en/lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="119" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204" />
@@ -552,16 +432,6 @@
     <entry file="file://$PROJECT_DIR$/www/engine/protected/epilog.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="6" selection-end="6" vertical-scroll-proportion="0.02910959" vertical-offset="0" max-vertical-offset="584" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/site/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="7" selection-start="13" selection-end="13" vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="119" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/site/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="602" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/engine/templates/default/footer.php">
@@ -574,122 +444,189 @@
         <state line="18" column="16" selection-start="792" selection-end="792" vertical-scroll-proportion="0.50830567" vertical-offset="0" max-vertical-offset="602" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/prolog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.47847682" vertical-offset="0" max-vertical-offset="604" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="98" selection-start="369" selection-end="369" vertical-scroll-proportion="0.45182723" vertical-offset="0" max-vertical-offset="602">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="24" selection-start="54" selection-end="54" vertical-scroll-proportion="0.08471761" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/user/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="136" selection-end="147" vertical-scroll-proportion="0.14119601" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/user/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="628" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="31" selection-start="247" selection-end="247" vertical-scroll-proportion="0.27070063" vertical-offset="0" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/user/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="334" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/newTemplate/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="15" selection-start="284" selection-end="284" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/user/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="10" selection-start="1969" selection-end="1969" vertical-scroll-proportion="1.4142615" vertical-offset="0" max-vertical-offset="935" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/lang/ru/lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="22" selection-start="688" selection-end="688" vertical-scroll-proportion="0.53654486" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/lang/en/lang.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="598" selection-end="655" vertical-scroll-proportion="0.50830567" vertical-offset="0" max-vertical-offset="602" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/user/viewList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="32" selection-start="466" selection-end="466" vertical-scroll-proportion="0.31063122" vertical-offset="0" max-vertical-offset="850" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="803" selection-end="803" vertical-scroll-proportion="0.66225165" vertical-offset="59" max-vertical-offset="663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/engine/models/UserModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="58" selection-start="460" selection-end="460" vertical-scroll-proportion="0.33774835" vertical-offset="0" max-vertical-offset="663">
+        <state line="25" column="57" selection-start="734" selection-end="734" vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="663">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/controllers/UserController.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CModelConnectDB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="531" selection-end="531" vertical-scroll-proportion="0.19536424" vertical-offset="188" max-vertical-offset="1173">
+        <state line="25" column="0" selection-start="680" selection-end="680" vertical-scroll-proportion="0.70598006" vertical-offset="0" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="294" selection-end="294" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="493">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CModelConnectDB.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="79" selection-start="592" selection-end="592" vertical-scroll-proportion="0.56478405" vertical-offset="0" max-vertical-offset="1224">
-          <folding>
-            <element signature="e#7#65#0" expanded="true" />
-          </folding>
+        <state line="19" column="23" selection-start="369" selection-end="369" vertical-scroll-proportion="0.19701986" vertical-offset="204" max-vertical-offset="1836">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CModel.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/models/TranslateModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="9" selection-start="338" selection-end="338" vertical-scroll-proportion="0.45182723" vertical-offset="0" max-vertical-offset="1836">
+        <state line="13" column="5" selection-start="49" selection-end="442" vertical-scroll-proportion="0.36589405" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/lang/en/lang.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="29" selection-start="0" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="591">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/config/settings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="56" selection-start="56" selection-end="56" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/views/site/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="135" selection-start="460" selection-end="587" vertical-scroll-proportion="0.14382403" vertical-offset="0" max-vertical-offset="591">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/models/SiteModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="26" selection-start="274" selection-end="274" vertical-scroll-proportion="0.30960265" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/views/translate/changeTranslate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="135" selection-start="587" selection-end="587" vertical-scroll-proportion="0.14382403" vertical-offset="0" max-vertical-offset="663">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/views/user/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="135" selection-start="587" selection-end="587" vertical-scroll-proportion="0.14382403" vertical-offset="0" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/views/user/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="71" selection-start="786" selection-end="786" vertical-scroll-proportion="0.7317881" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/views/user/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="135" selection-start="587" selection-end="587" vertical-scroll-proportion="0.14382403" vertical-offset="0" max-vertical-offset="969">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/views/user/viewList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="135" selection-start="587" selection-end="587" vertical-scroll-proportion="0.14382403" vertical-offset="0" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/lang/ru/lang.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1149" selection-end="1149" vertical-scroll-proportion="0.77483445" vertical-offset="161" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/engine/protected/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.70598006" vertical-offset="0" max-vertical-offset="602">
+        <state line="19" column="0" selection-start="364" selection-end="364" vertical-scroll-proportion="0.47847682" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/prolog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="794" selection-end="794" vertical-scroll-proportion="0.42218542" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="13" selection-start="293" selection-end="293" vertical-scroll-proportion="0.4047619" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/newTemplate/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="11" selection-start="189" selection-end="189" vertical-scroll-proportion="0.21587302" vertical-offset="0" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CCache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="22" selection-end="52" vertical-scroll-proportion="0.08443709" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CMemcache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="28" selection-start="61" selection-end="61" vertical-scroll-proportion="0.11258278" vertical-offset="0" max-vertical-offset="604">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/engine/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="976" selection-end="976" vertical-scroll-proportion="-17.346153" vertical-offset="42" max-vertical-offset="646">
+        <state line="41" column="31" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.77483445" vertical-offset="229" max-vertical-offset="867">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/engine/protected/CMain.php">
+    <entry file="file://$PROJECT_DIR$/www/engine/protected/core/CMain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="681" selection-end="681" vertical-scroll-proportion="0.6611296" vertical-offset="27" max-vertical-offset="714">
+        <state line="55" column="37" selection-start="1694" selection-end="1704" vertical-scroll-proportion="0.3245033" vertical-offset="739" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/templates/default/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="22" selection-start="81" selection-end="81" vertical-scroll-proportion="0.11258278" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/controllers/TranslateController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="8" selection-start="100" selection-end="179" vertical-scroll-proportion="-3.2692308" vertical-offset="0" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/engine/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="79" selection-start="166" selection-end="166" vertical-scroll-proportion="0.14072847" vertical-offset="0" max-vertical-offset="1224">
           <folding />
         </state>
       </provider>

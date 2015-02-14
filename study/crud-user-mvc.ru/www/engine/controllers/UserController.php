@@ -3,6 +3,7 @@
 class UserController extends CController {
 
     public function indexAction() {
+        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('allUsers'));
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
             $arrResult = $model->findAll();
@@ -16,6 +17,7 @@ class UserController extends CController {
     }
 
     public function viewAction() {
+        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('user'));
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
             $id = filterGetValue($_GET["id"]);
@@ -30,6 +32,7 @@ class UserController extends CController {
     }
 
     public function createAction() {
+        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('createUser'));
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
             if(!empty($_POST["user"])) {

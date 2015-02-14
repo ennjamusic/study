@@ -6,14 +6,14 @@ body {
 
 .column1 {
     float: left;
-    width: 10%;
+    width: 15%;
     margin-top: 50px;
     background-color: seashell;
 }
 
 .column2 {
     float: right;
-    width: 89%;
+    width: 84%;
 }
 
 .loginForm {

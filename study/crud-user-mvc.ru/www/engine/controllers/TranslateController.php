@@ -1,0 +1,25 @@
+<?php
+
+class TranslateController extends CController {
+
+    public function indexAction() {
+        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('translateApp'));
+        $arrResult = CMain::getTranslateAll();
+        if(!empty($_POST["TRANSLATE"])) {
+            $translateArray = array();
+            foreach ($_POST["TRANSLATE"] as $key=>$value) {
+                if($key=="newVal" && empty($value[0]) && empty($value[1])) {
+                    continue;
+                }
+                if(empty($value[0]) && empty($value[1])) {
+                    continue;
+                }
+                $translateArray[filterGetValue($value[0])] = filterGetValue($value[1]);
+            }
+            $model = new TranslateModel();
+            $arrResult = $model->update($translateArray,$arrResult);
+        }
+        $this->render("changeTranslate","translate",$arrResult);
+    }
+
+} 

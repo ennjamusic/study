@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title><?=CMain::showTitle()?></title>
     <?=CMain::linkCss(TEMPLATE_PATH."css/style.css")?>
 
 </head>

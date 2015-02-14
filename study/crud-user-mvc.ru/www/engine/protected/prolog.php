@@ -9,9 +9,11 @@ if(file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/protected/config/config.php"))
     echo "Error: Config file is not found.";
     die();
 }
-include_once($_SERVER["DOCUMENT_ROOT"].LANG_PATH);
-include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/CController.php");
-include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/CModelConnectDB.php");
-include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/CMain.php");
-include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/CModel.php");
-include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/autoload.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CController.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CModelConnectDB.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CMain.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CModel.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/autoload.php");
+//include_once($_SERVER["DOCUMENT_ROOT"]."/".LANG_PATH);
+
+
