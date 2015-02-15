@@ -11,7 +11,6 @@ class CModel {
     }
 
     public function __construct() {
-//        $db = new CModelConnectDB();
         if($db = CModelConnectDB::getInstance()) {
             $this->setDbConn($db);
         }
@@ -29,16 +28,27 @@ class CModel {
         }
     }
 
-    public function update($elemInfoArray) {
-
+    public function update($elemInfo,$elemNewInfo) {
+        $strQuery = "UPDATE ".$this->tableName." SET ";
+        foreach($elemNewInfo as $key=>$value) {
+            $strQuery .= "`".$key.'` = "'.$value.'", ';
+        }
+        $strQuery = substr($strQuery,0,-2);
+        $strQuery .= " WHERE ";
+        foreach($elemInfo as $key=>$value) {
+            $strQuery .= "`".$key.'` = "'.$value.'", ';
+        }
+        $strQuery = substr($strQuery,0,-2);
+        try {
+            $stm = self::$dbLink->prepare($strQuery);
+            $stm->execute($elemInfoArray);
+        } catch(PDOException $e) {
+            echo $e->getMessage();
+        }
     }
 
-    public function updateById($elemInfoArray) {
-
-    }
-
-    public function updateByAttr($elemInfoArray) {
-
+    public function updateById($id,$elemInfoArray) {
+        return $this->update(array("id"=>$id),$elemInfoArray);
     }
 
     public function delete($elemInfo) {
@@ -97,7 +107,7 @@ class CModel {
     }
 
     public function findByAttr($elemInfoArray) {
-
+        return $this->find($elemInfoArray);
     }
 
 } 

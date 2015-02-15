@@ -9,9 +9,6 @@ class UserController extends CController {
             $arrResult = $model->findAll();
             $this->render("viewList","user",$arrResult);
         } else {
-            global $errMessages;
-            global $langArray;
-            $errMessages[] = $langArray["accessDenied"];
             CMain::redirect("/");
         }
     }
@@ -22,11 +19,16 @@ class UserController extends CController {
             $model = new UserModel();
             $id = filterGetValue($_GET["id"]);
             $arrResult = $model->findById($id);
+            if(!empty($_POST["user"])) {
+                $userNewInfo = array();
+                foreach($_POST["user"] as $key=>$value) {
+                    $userNewInfo[filterGetValue($key)] = filterGetValue($value);
+                }
+                $model->updateById($id,array_diff($userNewInfo,$arrResult));
+                $arrResult = array_merge(array_diff($userNewInfo,$arrResult),array_intersect($userNewInfo,$arrResult));
+            }
             $this->render("view","user",$arrResult);
         } else {
-            global $errMessages;
-            global $langArray;
-            $errMessages[] = $langArray["accessDenied"];
             CMain::redirect("/");
         }
     }
@@ -43,9 +45,6 @@ class UserController extends CController {
             }
             $this->render("create","user");
         } else {
-            global $errMessages;
-            global $langArray;
-            $errMessages[] = $langArray["accessDenied"];
             CMain::redirect("/");
         }
     }
@@ -57,9 +56,6 @@ class UserController extends CController {
             $model->deleteById($id);
             CMain::redirect(CMain::getLink(array("controller"=>"user", "view"=>"index")));
         } else {
-            global $errMessages;
-            global $langArray;
-            $errMessages[] = $langArray["accessDenied"];
             CMain::redirect("/");
         }
     }
