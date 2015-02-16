@@ -37,10 +37,32 @@ class SiteController extends CController {
         $this->render("settings","site",$arrResult);
     }
 
-    public function registerAction($userInfoArray) {
+    public function cacheClearAction() {
+        $dirname = $_SERVER["DOCUMENT_ROOT"]."/cache/";
+        $dir = opendir($dirname);
+        while (($file = readdir($dir)) !== false){
+            if(is_file($dirname."/".$file))
+                unlink($dirname."/".$file);
+        }
+        $path = CMain::getLink(array("controller"=>"site",
+                                    "view"=>"settings"));
+        CMain::redirect($path);
+    }
+
+    public function registerAction() {
         /**
-         * ToDo: registerAction
+         * ToDo: Registration success messages
          */
+        if(isset($_POST["registerForm"]) && !empty($_POST["registerForm"])) {
+            $filteredUserInfo = array();
+            foreach($_POST["registerForm"] as $key=>$value) {
+                $filteredUserInfo[$key] = filterGetValue($value);
+            }
+            $model = new UserModel();
+            $model->create($filteredUserInfo);
+
+        }
+        $this->render("register","user");
     }
 
 } 

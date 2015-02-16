@@ -22,6 +22,9 @@
         }
         ?>
         <tr>
+            <td colspan="2"><a href="<?=CMain::getLink(array("controller"=>"site","view"=>"cacheClear"))?>"><?=CMain::getTranslate("clearCache")?></a></td>
+        </tr>
+        <tr>
             <td></td>
             <td><input type="submit" name="save" value="<?=CMain::getTranslate("save")?>"></td>
         </tr>

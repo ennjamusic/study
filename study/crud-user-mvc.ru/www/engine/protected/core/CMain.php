@@ -76,4 +76,12 @@ class CMain {
         self::$pageTitle = $title;
     }
 
+    public static function getCurPage() {
+        return $_SERVER["REQUEST_URI"];
+    }
+
+    public static function getHashCurPage() {
+        return md5(CMain::getCurPage());
+    }
+
 }

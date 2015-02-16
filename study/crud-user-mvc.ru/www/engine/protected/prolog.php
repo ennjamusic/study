@@ -16,6 +16,7 @@ include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CModelConnectDB.p
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CMain.php");
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CModel.php");
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/autoload.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CCache.php");
 //include_once($_SERVER["DOCUMENT_ROOT"]."/".LANG_PATH);
 
 

@@ -1,18 +1,5 @@
 <table class="loginForm">
-    <?php
-    global $errMessages;
-        if(count($errMessages)!=0) {
-            ?>
-            <tr class="errMessages"><td colspan="2">
-            <?php
-            foreach($errMessages as $value) {
-                echo $value."<br />";
-            }
-            ?>
-            </td></tr>
-            <?php
-        }
-    ?>
+
     <form action="" method="POST">
 
         <tr>
@@ -23,8 +10,11 @@
             <td><?=CMain::getTranslate('password')?></td>
             <td><input name="loginForm[password]" type="password"/></td>
         </tr>
-        <td></td>
+        <tr><td></td>
         <td><input type="submit" value="<?=CMain::getTranslate('enter')?>" /></td>
-
+    </tr>
     </form>
+    <tr>
+        <td colspan="2"><a href="<?=CMain::getLink(array("controller"=>"site","view"=>"register"))?>"><?=CMain::getTranslate("userRegister")?></a></td>
+    </tr>
 </table>
