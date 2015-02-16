@@ -3,6 +3,7 @@
 class SiteController extends CController {
 
     public function indexAction() {
+
         CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('enter'));
         if(isset($_POST["loginForm"]) && !empty($_POST["loginForm"])) {
             $login = filterGetValue($_POST["loginForm"]["login"]);
@@ -24,17 +25,21 @@ class SiteController extends CController {
     }
 
     public function settingsAction() {
-        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('settings'));
-        $arrResult = CMain::getSettingsArray();
-        if(!empty($_POST["SETTINGS"])) {
-            $settingsArray = array();
-            foreach ($_POST["SETTINGS"] as $key=>$value) {
-                $settingsArray[$key] = filterGetValue($value);
+        if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
+            CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('settings'));
+            $arrResult = CMain::getSettingsArray();
+            if(!empty($_POST["SETTINGS"])) {
+                $settingsArray = array();
+                foreach ($_POST["SETTINGS"] as $key=>$value) {
+                    $settingsArray[$key] = filterGetValue($value);
+                }
+                $model = new SiteModel();
+                $arrResult = $model->update($settingsArray);
             }
-            $model = new SiteModel();
-            $arrResult = $model->update($settingsArray);
+            $this->render("settings","site",$arrResult);
+            } else {
+        CMain::redirect("/");
         }
-        $this->render("settings","site",$arrResult);
     }
 
     public function cacheClearAction() {

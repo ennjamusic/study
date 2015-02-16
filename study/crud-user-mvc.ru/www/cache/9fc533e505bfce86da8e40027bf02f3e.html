@@ -5,10 +5,41 @@
     <title></title>
     <link href="/engine/templates/newTemplate/css/style.css" type="text/css" rel="stylesheet">
 </head>
-<body><!--error--><br />
-<b>Warning</b>:  include_once(P:/home/crud-user-mvc.ru/www/engine/templates/newTemplate/views/user/register.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in <b>P:\home\crud-user-mvc.ru\www\engine\protected\core\CController.php</b> on line <b>26</b><br />
-<script language=JavaScript src='/denwer/errors/phperror_js.php'></script><!--error--><br />
-<b>Warning</b>:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'P:/home/crud-user-mvc.ru/www/engine/templates/newTemplate/views/user/register.php' for inclusion (include_path='.;C:\php\pear') in <b>P:\home\crud-user-mvc.ru\www\engine\protected\core\CController.php</b> on line <b>26</b><br />
-<script language=JavaScript src='/denwer/errors/phperror_js.php'></script>
+<body><table class="loginForm">
+
+    <form action="" method="POST">
+
+        <tr>
+            <td>Логин:</td>
+            <td><input name="registerForm[login]" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Пароль:</td>
+            <td><input name="registerForm[password]" type="password"/></td>
+        </tr>
+        <tr>
+            <td>Имя:</td>
+            <td><input name="registerForm[name]" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Фамилия:</td>
+            <td><input name="registerForm[lastname]" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Телефон:</td>
+            <td><input name="registerForm[phone]" type="text"/></td>
+        </tr>
+        <tr>
+            <td>Электронная почта:</td>
+            <td><input name="registerForm[email]" type="text"/></td>
+        </tr>
+        <tr><td></td>
+        <td><input type="submit" value="Зарегистрироваться" /></td>
+    </tr>
+    </form>
+    <tr>
+        <td colspan="2"><a href="/?controller=site&view=index&">Войти</a></td>
+    </tr>
+</table>
 </body>
 </html>
