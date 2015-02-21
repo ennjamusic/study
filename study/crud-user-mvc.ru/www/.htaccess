@@ -2,9 +2,14 @@ AddDefaultCharset utf-8
 
 RewriteEngine on
 
-#if a directory or a file exists, use it directly
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?controller=$1&view=index
+    RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)[/]?$ index.php?controller=$1&view=$2
 
-	#otherwise forward it to index.php
-	RewriteRule . index.php
+
+
+
+#   ERRORS
+
+errorDocument 404 http://crud-user-mvc.ru/errors/404.php

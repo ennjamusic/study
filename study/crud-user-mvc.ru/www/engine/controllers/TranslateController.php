@@ -3,7 +3,7 @@
 class TranslateController extends CController {
 
     public function indexAction() {
-        if($_SESSION["userRole"]==USER_ROLE_ADMIN && $_GET["view"]=="delete" && !empty($_GET["id"])) {
+        if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('translateApp'));
             $arrResult = CMain::getTranslateAll();
             if(!empty($_POST["TRANSLATE"])) {

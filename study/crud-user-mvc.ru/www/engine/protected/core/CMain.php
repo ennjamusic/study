@@ -20,9 +20,17 @@ class CMain {
     }
 
     public static function getLink($linkArray) {
-        $link = "/?";
-        foreach($linkArray as $key=>$value) {
-            $link .= $key."=".$value."&";
+        $link="";
+        if(HFURL_ON==true) {
+            $link="/";
+            foreach($linkArray as $value) {
+                $link .= $value."/";
+            }
+        } else {
+            $link = "/?";
+            foreach($linkArray as $key=>$value) {
+                $link .= $key."=".$value."&";
+            }
         }
         return $link;
     }

@@ -18,3 +18,5 @@ define("USER_ROLE_ADMIN",1);
 define("USER_ROLE_GUEST",0);
 
 
+/*----- Human-friendly URL ------*/
+define("HFURL_ON",true);
