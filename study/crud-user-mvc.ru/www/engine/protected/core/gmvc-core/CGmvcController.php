@@ -13,7 +13,8 @@ class CGmvcController {
     }
 
     public function genControllerAction() {
-
+        $model = new CGmvcModel();
+        $model->generateController("newCon",array("create","list"));
         $this->render("genController");
     }
 

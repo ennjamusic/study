@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e1dca8;
+}
+
+.wrapper {
+    width: 750px;
+    margin: 100px auto;
+}
+
+.column1 {
+    float: left;
+    width: 30%;
+}
+
+.column1 li {
+    list-style-type: none;
+}
+
+.column1 ul {
+    padding: 0;
+}
+
+.column2 {
+    float: right;
+    width: 68%;
+}
+
+h2 {
+    margin-top: 0;
+}
