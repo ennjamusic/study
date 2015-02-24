@@ -4,17 +4,17 @@ class SiteController extends CController {
 
     public function indexAction() {
 
-        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('enter'));
+        CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('enter'));
         if(isset($_POST["loginForm"]) && !empty($_POST["loginForm"])) {
             $login = filterGetValue($_POST["loginForm"]["login"]);
             $password = filterGetValue($_POST["loginForm"]["password"]);
             $model = new UserModel();
             if(!$model->login($login,$password)) {
-                $errMessages[] = CMain::getTranslate("accessDenied");
+                $errMessages[] = CApp::getTranslate("accessDenied");
             } else {
-                $link = CMain::getLink(array("controller"=>"user",
+                $link = CApp::getLink(array("controller"=>"user",
                                             "view"=>"index"));
-                CMain::redirect($link);
+                CApp::redirect($link);
             }
         }
         $this->render("login","user");
@@ -26,8 +26,8 @@ class SiteController extends CController {
 
     public function settingsAction() {
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
-            CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('settings'));
-            $arrResult = CMain::getSettingsArray();
+            CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('settings'));
+            $arrResult = CApp::getSettingsArray();
             if(!empty($_POST["SETTINGS"])) {
                 $settingsArray = array();
                 foreach ($_POST["SETTINGS"] as $key=>$value) {
@@ -38,7 +38,7 @@ class SiteController extends CController {
             }
             $this->render("settings","site",$arrResult);
             } else {
-        CMain::redirect("/");
+        CApp::redirect("/");
         }
     }
 
@@ -49,9 +49,9 @@ class SiteController extends CController {
             if(is_file($dirname."/".$file))
                 unlink($dirname."/".$file);
         }
-        $path = CMain::getLink(array("controller"=>"site",
+        $path = CApp::getLink(array("controller"=>"site",
                                     "view"=>"settings"));
-        CMain::redirect($path);
+        CApp::redirect($path);
     }
 
     public function registerAction() {

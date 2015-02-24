@@ -1,16 +1,16 @@
 <div class="column1">
     <ul class="menu">
-        <li><a href="<?=CMain::getLink(array("controller"=>"user","view"=>"create"))?>"><?=CMain::getTranslate("createUser")?></a></li>
-        <li><a href="<?=CMain::getLink(array("controller"=>"user","view"=>"index"))?>"><?=CMain::getTranslate("allUsers")?></a></li>
-        <li><a href="<?=CMain::getLink(array("controller"=>"translate","view"=>"index"))?>"><?=CMain::getTranslate("translate")?></a></li>
-        <li><a href="<?=CMain::getLink(array("controller"=>"site","view"=>"settings"))?>"><?=CMain::getTranslate("settings")?></a></li>
+        <li><a href="<?=CApp::getLink(array("controller"=>"user","view"=>"create"))?>"><?=CApp::getTranslate("createUser")?></a></li>
+        <li><a href="<?=CApp::getLink(array("controller"=>"user","view"=>"index"))?>"><?=CApp::getTranslate("allUsers")?></a></li>
+        <li><a href="<?=CApp::getLink(array("controller"=>"translate","view"=>"index"))?>"><?=CApp::getTranslate("translate")?></a></li>
+        <li><a href="<?=CApp::getLink(array("controller"=>"site","view"=>"settings"))?>"><?=CApp::getTranslate("settings")?></a></li>
     </ul>
 </div>
 <div class="column2">
 <table class="changeUser">
     <thead>
-    <td><?=CMain::getTranslate("settingName")?></td>
-    <td><?=CMain::getTranslate("settingValue")?></td>
+    <td><?=CApp::getTranslate("settingName")?></td>
+    <td><?=CApp::getTranslate("settingValue")?></td>
     </thead>
     <form method="post">
         <?php
@@ -22,11 +22,11 @@
         }
         ?>
         <tr>
-            <td colspan="2"><a href="<?=CMain::getLink(array("controller"=>"site","view"=>"cacheClear"))?>"><?=CMain::getTranslate("clearCache")?></a></td>
+            <td colspan="2"><a href="<?=CApp::getLink(array("controller"=>"site","view"=>"cacheClear"))?>"><?=CApp::getTranslate("clearCache")?></a></td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="save" value="<?=CMain::getTranslate("save")?>"></td>
+            <td><input type="submit" name="save" value="<?=CApp::getTranslate("save")?>"></td>
         </tr>
     </form>
 </table></div>

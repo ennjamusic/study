@@ -24,7 +24,7 @@ function filterGetValue($var) {
     return trim(strip_tags(addslashes($var)));
 }
 
-$settings = CMain::getSettingsArray();
+$settings = CApp::getSettingsArray();
 
 /*---- TEMPLATE ----*/
 define("TEMPLATE",$settings["template"]);

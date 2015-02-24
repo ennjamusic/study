@@ -16,9 +16,8 @@ class CController {
 
     protected function render($view,$controller="site", $arrResult=array(), $template=TEMPLATE) {
         $cache = new CCache(604800);
-//        echo $_SERVER["REQUEST_URI"]; die();
         $flagCache = false;
-        if(!$cache->cacheExists(CMain::getHashCurPage())) {
+        if(!$cache->cacheExists(CApp::getHashCurPage()) && false) {
             $flagCache = true;
             $cache->startCache();
         }
@@ -26,7 +25,7 @@ class CController {
         include_once($_SERVER["DOCUMENT_ROOT"]."/engine/templates/".$template."/views/".strtolower($controller)."/".$view.".php");
         include_once($_SERVER["DOCUMENT_ROOT"]."/engine/templates/".$template."/footer.php");
         if($flagCache) {
-            $cache->writeCache(filterGetValue(CMain::getHashCurPage()));
+            $cache->writeCache(filterGetValue(CApp::getHashCurPage()));
         }
     }
 

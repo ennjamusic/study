@@ -4,8 +4,8 @@ class TranslateController extends CController {
 
     public function indexAction() {
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
-            CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('translateApp'));
-            $arrResult = CMain::getTranslateAll();
+            CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('translateApp'));
+            $arrResult = CApp::getTranslateAll();
             if(!empty($_POST["TRANSLATE"])) {
                 $translateArray = array();
                 foreach ($_POST["TRANSLATE"] as $key=>$value) {
@@ -22,7 +22,7 @@ class TranslateController extends CController {
             }
             $this->render("changeTranslate","translate",$arrResult);
         } else {
-            CMain::redirect("/");
+            CApp::redirect("/");
         }
     }
 

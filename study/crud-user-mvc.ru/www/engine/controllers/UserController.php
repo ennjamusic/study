@@ -3,20 +3,21 @@
 class UserController extends CController {
 
     public function indexAction() {
-        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('allUsers'));
+        CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('allUsers'));
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
             $arrResult = $model->findAll();
             $this->render("viewList","user",$arrResult);
         } else {
-            CMain::redirect("/");
+            CApp::redirect("/");
         }
     }
 
     public function viewAction() {
-        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('user'));
+        CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('user'));
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
+            debug($_GET);
             $id = filterGetValue($_GET["id"]);
             $arrResult = $model->findById($id);
             if(!empty($_POST["user"])) {
@@ -29,12 +30,12 @@ class UserController extends CController {
             }
             $this->render("view","user",$arrResult);
         } else {
-            CMain::redirect("/");
+            CApp::redirect("/");
         }
     }
 
     public function createAction() {
-        CMain::setTitle(CMain::getAppName()." | ".CMain::getTranslate('createUser'));
+        CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('createUser'));
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
             if(!empty($_POST["user"])) {
@@ -45,7 +46,7 @@ class UserController extends CController {
             }
             $this->render("create","user");
         } else {
-            CMain::redirect("/");
+            CApp::redirect("/");
         }
     }
 
@@ -54,9 +55,9 @@ class UserController extends CController {
             $model = new UserModel();
             $id = filterGetValue($_GET["id"]);
             $model->deleteById($id);
-            CMain::redirect(CMain::getLink(array("controller"=>"user", "view"=>"index")));
+            CApp::redirect(CApp::getLink(array("controller"=>"user", "view"=>"index")));
         } else {
-            CMain::redirect("/");
+            CApp::redirect("/");
         }
     }
 
