@@ -20,7 +20,7 @@ class CModelConnectDB {
              *
              * if it need, it may return false to deny for all other except one
              */
-            return false;
+            return self::$instance->getDBConnection();
         }
     }
 

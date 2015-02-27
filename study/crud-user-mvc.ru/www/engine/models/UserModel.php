@@ -19,16 +19,11 @@ class UserModel extends CModel {
 
     public static function logout() {
         session_destroy();
-        CMain::redirect("/");
+        CApp::redirect("/");
     }
 
     public function isAdmin() {
         return ($this->user['role']==USER_ROLE_ADMIN)?true:false;
     }
 
-    public function register() {
-        /**
-         * ToDo: Registration
-         */
-    }
 } 

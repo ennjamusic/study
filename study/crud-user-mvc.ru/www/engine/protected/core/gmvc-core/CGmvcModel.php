@@ -25,7 +25,6 @@ class CGmvcModel {
             $buffer = fgets($handle);
             if(strstr($buffer,"Action")) {
                 $flag = true;
-//                echo "123";
             }
             $result.=$buffer;
             if (strstr($buffer,"}") && $flag) {
@@ -43,13 +42,15 @@ class CGmvcModel {
         $result = str_replace("Tpl",ucfirst($cName),$result);
         file_put_contents($destination,$result);
 
-        $this->generateViews($cActionsArray);
-
     }
 
-    public function generateViews($viewsArray) {
+    public function generateViews($cName,$viewsArray) {
         $source = __DIR__."/mvc-tpl-res/views/index.php";
-        $destination = $_SERVER["DOCUMENT_ROOT"]."/engine/controllers/".ucfirst($cName)."Controller.php";
+        $destination = $_SERVER["DOCUMENT_ROOT"].TEMPLATE_PATH."views/".$cName."/";
+        mkdir($destination);
+        foreach($viewsArray as $value) {
+            copy($source,$destination.$value.".php");
+        }
 
     }
 
@@ -60,6 +61,7 @@ class CGmvcModel {
 
     public function createTable($tableName,$tableInfoArray) {
 
+        $db = CModelConnectDB::getInstance();
 
     }
 

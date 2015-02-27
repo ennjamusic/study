@@ -54,6 +54,10 @@ class SiteController extends CController {
         CApp::redirect($path);
     }
 
+    public function aboutAction() {
+        $this->render("about","site");
+    }
+
     public function registerAction() {
         /**
          * ToDo: Registration success messages

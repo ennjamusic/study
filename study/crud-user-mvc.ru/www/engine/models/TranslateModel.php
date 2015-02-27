@@ -9,7 +9,7 @@ class TranslateModel extends CModel {
         $arrDiff = array_diff($arrayNewTranslate,$arrayOldTranslate);
         $arrIntersect = array_intersect($arrayNewTranslate,$arrayOldTranslate);
         $arrResult = array_merge($arrDiff,$arrIntersect);
-        CMain::setTranslateArray($arrResult);
+        CApp::setTranslateArray($arrResult);
         return $arrResult;
     }
 } 

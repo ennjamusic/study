@@ -13,8 +13,20 @@ class CGmvcController {
     }
 
     public function genControllerAction() {
-        $model = new CGmvcModel();
-        $model->generateController("newCon",array("create","list"));
+
+        if(!empty($_POST["newController"])) {
+            $viewsArray = array();
+            if(!empty($_POST["views"])) {
+                $viewsArray = explode(",",$_POST["views"]);
+                foreach($viewsArray as $key=>$value) {
+                    $viewsArray[$key] = filterGetValue($value);
+                }
+            }
+            $controllerName = filterGetValue($_POST["newController"]);
+            $model = new CGmvcModel();
+            $model->generateController($controllerName,$viewsArray);
+            $model->generateViews($controllerName,$viewsArray);
+        }
         $this->render("genController");
     }
 
