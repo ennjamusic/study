@@ -33,9 +33,26 @@ class CGmvcController {
     public function genFormAction() {
 
         $this->render("genForm");
+        $model = new CGmvcModel();
+        $model->generateForm("1");
     }
 
     public function createTableAction() {
+
+        $model = new CGmvcModel();
+        $tableArr = array(
+            "id" => array("type"=>"int",
+                        "auto_increment"=>true,
+                        "not_null"=>true,
+                        "key"=>"primary",
+                    ),
+            "name" => array(
+                        "type"=>"varchar",
+                        "length"=>55,
+            ),
+        );
+
+        $model->createTable("book",$tableArr);
 
         $this->render("createTable");
     }

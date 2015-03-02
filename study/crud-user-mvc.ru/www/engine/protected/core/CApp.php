@@ -8,11 +8,21 @@ class CApp {
         $classNew = $class.$typeClass;
         return new $classNew;
     }
+
     public static function createAction($methodName) {
         return $methodName."Action";
     }
+
     public static function linkCss($link) {
         return '<link href="'.$link.'" type="text/css" rel="stylesheet">';
+    }
+
+    public static function linkGoogleJQuery($version="2.1.3") {
+        return '<script src="https://ajax.googleapis.com/ajax/libs/jquery/'.$version.'/jquery.min.js"></script>';
+    }
+
+    public static function linkScriptJS($path) {
+        return '<script src="'.$path.'"></script>';
     }
 
     public static function redirect($link) {

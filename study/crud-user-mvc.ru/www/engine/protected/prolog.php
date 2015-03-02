@@ -12,14 +12,19 @@ if(file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/protected/config/config.php"))
     die();
 }
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CController.php");
-include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/gmvc-core/CGmvcController.php");
-include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/gmvc-core/CGmvcModel.php");
-include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/widgets/Menu/CMenuWidget.php");
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CModelConnectDB.php");
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CApp.php");
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CModel.php");
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/autoload.php");
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/CCache.php");
-//include_once($_SERVER["DOCUMENT_ROOT"]."/".LANG_PATH);
 
+/**--------------- Generator MVC --------------**/
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/gmvc-core/CGmvcController.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/gmvc-core/CGmvcModel.php");
+
+/**--------------- Widgets --------------**/
+/* -- Form -- */
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/widgets/Form/CFormWidget.php");
+/* -- Menu -- */
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/widgets/Menu/CMenuWidget.php");
 

@@ -55,13 +55,53 @@ class CGmvcModel {
     }
 
     public function generateForm($fieldsArray) {
-
-
+        $form = new CFormWidget();
+        $form->startForm(array("method"=>"post","action"=>"index"));
+        $fields = array(
+            "field1" => array(
+                "type" => "text",
+                "name" => "field1",
+                "value" => "value1",
+                "class" => "class1",
+                "id" => "id",
+            ),
+            "field2" => array(
+                "type" => "text",
+                "name" => "field2",
+                "value" => "value2",
+            ),
+        );
+        $form->getFields($fields);
+        $form->getSubmit(array("value"=>"Сохранить"));
+        $form->endForm();
     }
 
     public function createTable($tableName,$tableInfoArray) {
-
         $db = CModelConnectDB::getInstance();
+//        debug($db);
+        $strQuery = "CREATE TABLE `".$tableName."` (";
+        foreach($tableInfoArray as $nameRecord=>$fieldsArray) {
+            $strQuery.=$nameRecord." ";
+            foreach($fieldsArray as $key=>$value) {
+                switch($key) {
+                    case "type": $strQuery.=" ".$value; break;
+                    case "default": $strQuery.=" DEFAULT ".$value; break;
+                    case "constraint": $strQuery.=" CONSTRAINT ".$value; break;
+                    case "index": $strQuery.=" INDEX ".$value; break;
+                    case "length": $strQuery.="(".$value.")"; break;
+                    case "auto_increment": $strQuery.=($value)?" auto_increment":""; break;
+                    case "not_null": $strQuery.=($value)?" not null":""; break;
+                    case "unique": $strQuery.=($value)?" unique":""; break;
+                    case "key": $strQuery.=" ".$value." key"; break;
+                    default: break;
+                }
+            }
+            $strQuery.=", ";
+        }
+        $strQuery = substr($strQuery,0,-2);
+        $strQuery.=")";
+        echo $strQuery;
+//        $db->exec($strQuery);
 
     }
 
