@@ -1,5 +1,5 @@
 <?php
-    header("Charset: utf-8");
+    header('Content-Type: text/html; charset=utf-8', true);
 ?>
 <!DOCTYPE html>
 <html>
@@ -7,6 +7,10 @@
     <meta charset="utf-8" />
     <title>Установка продукта</title>
     <style>
+
+        .like-button {
+
+        }
 
     </style>
 
@@ -53,3 +57,8 @@ if($_GET["STEP"]==2) {
 
 </body>
 </html>
+
+<?php
+
+unlink("arch.zip");
+unlink("install.php");

@@ -8,7 +8,11 @@ class CGmvcController {
     }
 
     public function genModelAction() {
-
+        if($_POST["save"]=="Save") {
+            $model = new CGmvcModel();
+            $modelName = filterGetValue($_POST["modelName"]);
+            $model->generateModel($modelName);
+        }
         $this->render("genModel");
     }
 
@@ -32,28 +36,75 @@ class CGmvcController {
 
     public function genFormAction() {
 
+        if($_POST["submit"]=="Save") {
+            $model = new CGmvcModel();
+
+            $fieldsArray = array();
+            $formAttrs = array();
+            $path = filterGetValue($_POST["pathForm"]);
+            $formTmp = explode(",",$_POST["formAttrs"]);
+            foreach($formTmp as $k=>&$v) {
+                $v = filterGetValue($v);
+                $arr = explode("=",$v);
+                $formAttrs[$arr[0]] = str_replace("\"","",$arr[1]);
+            }
+
+            foreach($_POST["FIELDS"] as $field) {
+                $fieldsArray[filterGetValue($field["nameField"])] = array(
+                    "type" => filterGetValue($field["typeField"]),
+                    "name" => filterGetValue($field["nameField"]),
+                    "value" => filterGetValue($field["defaultVal"]),
+                    "class" => filterGetValue($field["classField"]),
+                    "id" => filterGetValue($field["idField"]),
+                );
+            }
+            if(filterGetValue($_POST["genForm"])=="html") {
+                $model->generateFormHtml($path,$formAttrs,$fieldsArray);
+            } elseif(filterGetValue($_POST["genForm"])=="widget") {
+                $model->generateFormWidget($path,$formAttrs,$fieldsArray);
+            }
+
+        }
+
         $this->render("genForm");
-        $model = new CGmvcModel();
-        $model->generateForm("1");
     }
 
     public function createTableAction() {
 
-        $model = new CGmvcModel();
-        $tableArr = array(
-            "id" => array("type"=>"int",
-                        "auto_increment"=>true,
-                        "not_null"=>true,
-                        "key"=>"primary",
-                    ),
-            "name" => array(
-                        "type"=>"varchar",
-                        "length"=>55,
-            ),
-        );
+        if($_POST["save"]=="Save") {
+            $model = new CGmvcModel();
 
-        $model->createTable("book",$tableArr);
+            $tableName = filterGetValue($_POST["tableName"]);
 
+            $tableArr = array();
+
+            foreach($_POST["FIELDS"] as $fieldArr) {
+                $newFieldArr = array();
+                foreach($fieldArr as $key=>$val) {
+                    if($key == "fieldName") continue;
+                    if(!empty($val)) {
+
+                        switch($key) {
+                            case "fieldType"; $newFieldArr["type"] = filterGetValue($val); break;
+                            case "lengthType"; $newFieldArr["length"] = filterGetValue($val); break;
+                            case "keyType"; $newFieldArr["key"] = filterGetValue($val); break;
+                            case "defaultVal"; $newFieldArr["default"] = filterGetValue($val); break;
+                            case "indexVal"; $newFieldArr["index"] = filterGetValue($val); break;
+                            case "ifNull"; $newFieldArr["not_null"] = ($val)?true:false; break;
+                            case "ifAI"; $newFieldArr["auto_increment"] = ($val)?true:false; break;
+                            default: break;
+                        }
+
+                    }
+                }
+                $tableArr[filterGetValue($fieldArr["fieldName"])] = $newFieldArr;
+            }
+
+
+            if(!empty($tableArr)) {
+                $model->createTable($tableName,$tableArr);
+            }
+        }
         $this->render("createTable");
     }
 

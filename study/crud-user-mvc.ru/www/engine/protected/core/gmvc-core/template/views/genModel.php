@@ -6,6 +6,15 @@
         ?>
     </div>
     <div class="column2">
+
+        <h2>Генерация модели</h2>
+
+        <form method="post">
+            Введите имя модели, которую хотите сгенерировать<br />
+            <input type="text" name="modelName"/><br />
+            <input type="submit" name="save" value="Save" />
+        </form>
+
     </div>
 
 </div>

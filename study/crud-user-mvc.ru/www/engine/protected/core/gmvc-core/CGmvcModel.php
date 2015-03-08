@@ -2,9 +2,13 @@
 
 class CGmvcModel {
 
-    public function generateModel($mName, $mActionsArray) {
-
-
+    public function generateModel($mName) {
+        $source = __DIR__."/mvc-tpl-res/TplModel.php";
+        $destination = $_SERVER["DOCUMENT_ROOT"]."/engine/models/".ucfirst($mName)."Model.php";
+        $data = file_get_contents($source);
+        $data = str_replace("tpl",$mName,$data);
+        $data = str_replace("Tpl",ucfirst($mName),$data);
+        file_put_contents($destination,$data);
     }
 
     public function generateController($cName, $cActionsArray) {
@@ -54,31 +58,90 @@ class CGmvcModel {
 
     }
 
-    public function generateForm($fieldsArray) {
+    public function generateFormHtml($path,$formAttrs,$fieldsArray) {
+
+        $this->createDir($path);
+        $path = $_SERVER["DOCUMENT_ROOT"]."/engine/".$path;
+
+        $data = '<?php
+        include_once $_SERVER["DOCUMENT_ROOT"]."/engine/protected/prolog.php";
+        include_once $_SERVER["DOCUMENT_ROOT"]."/engine/templates/".CApp::getTemplate()."/header.php";
+        ?>
+
+        <form ';
+
+        foreach($formAttrs as $k=>$v) {
+            $data.=$k.'="'.$v.'" ';
+        }
+
+        $data.='>';
+
+        foreach($fieldsArray as $labelField=>$fieldArr) {
+            $data.=$labelField.'<input ';
+            foreach($fieldArr as $k=>$v) {
+                $data.=$k.'="'.$v.'" ';
+            }
+            $data.='/><br />';
+        }
+
+        $data.='
+        </form>
+
+        <?php
+        include_once $_SERVER["DOCUMENT_ROOT"]."/engine/templates/".CApp::getTemplate()."/footer.php";
+        ';
+
+        $this->createForm($path,$data);
+
+    }
+
+    public function generateFormWidget($path,$formAttrs,$fieldsArray) {
+
+        $this->createDir($path);
+        $path = $_SERVER["DOCUMENT_ROOT"]."/engine/".$path;
+
+        $data = '<?php
+        include_once $_SERVER["DOCUMENT_ROOT"]."/engine/protected/prolog.php";
+        include_once $_SERVER["DOCUMENT_ROOT"]."/engine/templates/".CApp::getTemplate()."/header.php";
+
+
         $form = new CFormWidget();
-        $form->startForm(array("method"=>"post","action"=>"index"));
+        $form->startForm(array(
+        ';
+
+        foreach($formAttrs as $k=>$v) {
+            $data.='"'.$k.'"=>"'.$v.'",';
+        }
+        $data.='));
         $fields = array(
-            "field1" => array(
-                "type" => "text",
-                "name" => "field1",
-                "value" => "value1",
-                "class" => "class1",
-                "id" => "id",
-            ),
-            "field2" => array(
-                "type" => "text",
-                "name" => "field2",
-                "value" => "value2",
-            ),
-        );
+        ';
+
+        foreach($fieldsArray as $key=>$fieldArr) {
+            $data.='"'.$key.'"=>array(';
+            foreach($fieldArr as $k=>$v) {
+                $data.='"'.$k.'"=>"'.$v.'",';
+            }
+            $data.='),
+            ';
+        }
+
+        $data.=');
+
         $form->getFields($fields);
         $form->getSubmit(array("value"=>"Сохранить"));
         $form->endForm();
+
+
+
+        include_once $_SERVER["DOCUMENT_ROOT"]."/engine/templates/".CApp::getTemplate()."/footer.php";
+        ';
+
+
+        $this->createForm($path,$data);
     }
 
     public function createTable($tableName,$tableInfoArray) {
         $db = CModelConnectDB::getInstance();
-//        debug($db);
         $strQuery = "CREATE TABLE `".$tableName."` (";
         foreach($tableInfoArray as $nameRecord=>$fieldsArray) {
             $strQuery.=$nameRecord." ";
@@ -100,9 +163,24 @@ class CGmvcModel {
         }
         $strQuery = substr($strQuery,0,-2);
         $strQuery.=")";
-        echo $strQuery;
-//        $db->exec($strQuery);
+        $db->exec($strQuery);
 
+    }
+
+
+    public function createForm($path, $data) {
+        file_put_contents($path."/form.php",$data);
+    }
+
+    public function createDir($path) {
+        $pathArray = explode("/",$path);
+        $newDir = $_SERVER["DOCUMENT_ROOT"]."/engine/";
+        foreach($pathArray as $dir) {
+            $newDir .= $dir."/";
+            if(!is_dir($newDir)) {
+                mkdir($newDir);
+            }
+        }
     }
 
 }
