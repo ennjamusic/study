@@ -5,9 +5,6 @@ SET time_zone = '+00:00';
 SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
-CREATE DATABASE `crudusertest` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `crudusertest`;
-
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -20,7 +17,8 @@ CREATE TABLE `users` (
   `name` varchar(100) NOT NULL,
   `lastname` varchar(100) NOT NULL,
   `phone` varchar(25) NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `login` (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `users` (`id`, `login`, `password`, `role`, `email`, `date_register`, `date_last_login`, `name`, `lastname`, `phone`) VALUES
@@ -33,4 +31,4 @@ INSERT INTO `users` (`id`, `login`, `password`, `role`, `email`, `date_register`
 (7,	'newuser',	'newuser',	0,	'newuser',	'2015-02-14 08:24:19',	'0000-00-00 00:00:00',	'newuser',	'newuser',	'123123'),
 (8,	'NewUserQwerty',	'NewUserQwerty',	0,	'NewUserQwerty',	'2015-02-16 11:46:54',	'0000-00-00 00:00:00',	'NewUserQwerty',	'NewUserQwerty',	'123123');
 
--- 2015-02-21 15:36:08
+-- 2015-03-10 14:09:49

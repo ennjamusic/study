@@ -32,7 +32,7 @@ class BackupController extends CController {
                                 $SubdirList[] = $full;
                             } elseif(is_file($full)) {
                                 //тут все просто: говорим, какой файл добавить в архив
-                                $zip->addFile(str_replace("P:/home/crud-user-mvc.ru/www/","",$full));
+                                $zip->addFile(str_replace($_SERVER["DOCUMENT_ROOT"],"",$full));
                             }
                         }
                         closedir($dh);

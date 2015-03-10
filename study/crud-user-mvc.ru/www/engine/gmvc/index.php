@@ -5,6 +5,7 @@ if(!isset($_GET["view"])) {
     $controller->indexAction();
 } else {
     $view = filterGetValue($_GET["view"]);
-    $action = CApp::createAction($view);
+    $command = new CCommand();
+    $action = $command->createAction($view);
     $controller->$action();
 }

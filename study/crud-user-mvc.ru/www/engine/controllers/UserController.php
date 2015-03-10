@@ -17,7 +17,6 @@ class UserController extends CController {
         CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('user'));
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
-            debug($_GET);
             $id = filterGetValue($_GET["id"]);
             $arrResult = $model->findById($id);
             if(!empty($_POST["user"])) {

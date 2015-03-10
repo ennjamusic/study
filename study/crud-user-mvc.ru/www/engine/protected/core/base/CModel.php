@@ -24,7 +24,7 @@ class CModel {
             $stm = self::$dbLink->prepare($strQuery);
             $stm->execute($elemInfoArray);
         } catch(PDOException $e) {
-            echo $e->getMessage();
+            throw new CException(__CLASS__,"Не удается выполнить запрос на вставку ".$e->getMessage());
         }
     }
 
@@ -43,7 +43,7 @@ class CModel {
             $stm = self::$dbLink->prepare($strQuery);
             $stm->execute($elemInfoArray);
         } catch(PDOException $e) {
-            echo $e->getMessage();
+            throw new CException(__CLASS__,"Не удается выполнить запрос на обновление ".$e->getMessage());
         }
     }
 
@@ -61,7 +61,7 @@ class CModel {
             $stm = self::$dbLink->prepare($strQuery);
             $stm->execute($elemInfoArray);
         } catch(PDOException $e) {
-            echo $e->getMessage();
+            throw new CException(__CLASS__,"Не удается выполнить запрос на удаление ".$e->getMessage());
         }
     }
 
@@ -92,7 +92,7 @@ class CModel {
                 $findResult[] = $row;
             }
         } catch(PDOException $e) {
-            $e->getMessage();
+            throw new CException(__CLASS__,"Не удается выполнить запрос на выборку ".$e->getMessage());
         }
         return $findResult;
     }

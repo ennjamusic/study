@@ -1,6 +1,8 @@
 <?php
 
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/base/CApp.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/base/CCommand.php");
+include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/base/CLog.php");
 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/db/CModelConnectDB.php");
 
 
@@ -10,7 +12,7 @@ function __autoload($className) {
         if(file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/gmvc-core/".$className.'.php')) {
             include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/gmvc-core/".$className.'.php');
         } else {
-            throw new CException(__FILE__,"Не подключился класс ".$className);
+            throw new CException(__CLASS__,"Не подключился класс ".$className);
         }
         return;
     }
@@ -23,7 +25,7 @@ function __autoload($className) {
             if(file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/base/".$className.'.php')) {
                 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/base/".$className.'.php');
             } else {
-                throw new CException(__FILE__,"Не подключился класс ".$className);
+                throw new CException(__CLASS__,"Не подключился класс ".$className);
             }
         }
         return;
@@ -33,7 +35,7 @@ function __autoload($className) {
         if(file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/exceptions/".$className.'.php')) {
             include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/exceptions/".$className.'.php');
         } else {
-            throw new CException(__FILE__,"Не подключился класс ".$className);
+            throw new CException(__CLASS__,"Не подключился класс ".$className);
         }
         return;
     }
@@ -42,7 +44,7 @@ function __autoload($className) {
         if(file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/cache/".$className.'.php')) {
             include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/cache/".$className.'.php');
         } else {
-            throw new CException(__FILE__,"Не подключился класс ".$className);
+            throw new CException(__CLASS__,"Не подключился класс ".$className);
         }
         return;
     }
@@ -53,7 +55,7 @@ function __autoload($className) {
         if(file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/widgets/".$dir."/".$className.'.php')) {
             include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/widgets/".$dir."/".$className.'.php');
         } else {
-            throw new CException(__FILE__,"Не подключился класс ".$className);
+            throw new CException(__CLASS__,"Не подключился класс ".$className);
         }
         return;
     }
@@ -66,7 +68,7 @@ function __autoload($className) {
             if(file_exists($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/base/".$className.'.php')) {
                 include_once($_SERVER["DOCUMENT_ROOT"]."/engine/protected/core/base/".$className.'.php');
             } else {
-                throw new CException(__FILE__,"Не подключился класс ".$className);
+                throw new CException(__CLASS__,"Не подключился класс ".$className);
             }
         }
         return;

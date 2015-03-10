@@ -4,15 +4,6 @@ class CApp {
 
     private static $pageTitle = "";
 
-    public static function createObj($class,$typeClass="Controller") {
-        $classNew = $class.$typeClass;
-        return new $classNew;
-    }
-
-    public static function createAction($methodName) {
-        return $methodName."Action";
-    }
-
     public static function linkCss($link) {
         return '<link href="'.$link.'" type="text/css" rel="stylesheet">';
     }

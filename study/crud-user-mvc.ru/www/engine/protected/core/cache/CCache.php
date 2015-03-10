@@ -7,6 +7,11 @@ class CCache {
 
     public function __construct($lifeTime) {
         self::$cacheDir = $_SERVER["DOCUMENT_ROOT"]."/cache/";
+        if(!is_dir(self::$cacheDir)) {
+
+            if(mkdir(self::$cacheDir))
+                throw new CException(__CLASS__,"Не удается создать папку для Кэша ");
+        }
         $this->lifeTime = $lifeTime;
     }
 
@@ -30,7 +35,9 @@ class CCache {
     public function writeCache($filename) {
         $buffer = ob_get_contents();
         ob_end_flush();
-        file_put_contents(self::$cacheDir . $filename.".html",$buffer);
+        if(!file_put_contents(self::$cacheDir . $filename.".html",$buffer)) {
+            throw new CException(__CLASS__,"Не удается записать файлы кэша ");
+        }
     }
 
 }

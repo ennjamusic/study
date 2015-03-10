@@ -7,13 +7,14 @@ if(count($_GET)==0 || !isset($_GET["controller"])) {
 } else {
     if(isset($_GET["controller"]) && !empty($_GET["controller"])) {
         $urlController = ucfirst(strtolower(filterGetValue($_GET["controller"])));
-        $controller = CApp::createObj($urlController);
+        $command = new CCommand();
+        $controller = $command->createObj($urlController);
         if(isset($_GET["view"]) && !empty($_GET["view"])) {
             $view = filterGetValue($_GET["view"]);
         } else {
             $view = "index";
         }
-        $action = CApp::createAction($view);
+        $action = $command->createAction($view);
         if(isset($_GET["param"]) && !empty($_GET["param"])) {
             $controller->$action(filterGetValue($_GET["param"]));
         } else {

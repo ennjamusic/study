@@ -45,7 +45,7 @@ class CModelConnectDB {
         try {
             $this->link = new PDO($this->dsn, $this->username, $this->password);
         } catch (PDOException $e) {
-            echo $e->getMessage();
+            throw new CException(__CLASS__,"Проблема с подключением к БД ".$e->getMessage());
             die();
         }
     }

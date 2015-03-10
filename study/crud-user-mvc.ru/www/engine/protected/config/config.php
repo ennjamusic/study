@@ -20,3 +20,6 @@ define("USER_ROLE_GUEST",0);
 
 /*----- Human-friendly URL ------*/
 define("HFURL_ON",true);
+
+/*----- Logs -----*/
+define("LOGS_ON",true);

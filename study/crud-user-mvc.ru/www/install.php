@@ -18,7 +18,7 @@
 <body>
 <?php
 if(!isset($_GET["STEP"])) {
-?>
+    ?>
     <h2>
         Добро пожаловать!
     </h2>
@@ -32,7 +32,7 @@ if(!isset($_GET["STEP"])) {
 
 if($_GET["STEP"]==1) {
     $zip = new ZipArchive;
-    $res = $zip->open($_SERVER["DOCUMENT_ROOT"]."/".$_GET['EXTRACT']);
+    $res = $zip->open($_SERVER["DOCUMENT_ROOT"]."/arch.zip");
     if ($res === TRUE) {
         $zip->extractTo($_SERVER["DOCUMENT_ROOT"]);
         $zip->close();
@@ -52,6 +52,10 @@ if($_GET["STEP"]==2) {
     <div>
     <a href="/" class="like-button">Перейти к вашему приложению</a>
     <?php
+
+
+unlink("arch.zip");
+unlink("install.php");
 }
 ?>
 
@@ -60,5 +64,3 @@ if($_GET["STEP"]==2) {
 
 <?php
 
-unlink("arch.zip");
-unlink("install.php");

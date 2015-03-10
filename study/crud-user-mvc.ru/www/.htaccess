@@ -16,5 +16,5 @@ RewriteEngine on
 
 #   ERRORS
 
-errorDocument 404 http://crud-user-mvc.ru/errors/404.php
-errorDocument 403 http://crud-user-mvc.ru/errors/403.php
+errorDocument 404 /errors/404.php
+errorDocument 403 /errors/403.php
