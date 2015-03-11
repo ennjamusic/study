@@ -1,1 +1,0 @@
-Для установки скачать localhost.sql, arch.zip, install.php. Восстановить дамп базы данных. arch.zip и install.php положить в корневую директорию и запустить в браузере http://ВАШ_ДОМЕН/install.php

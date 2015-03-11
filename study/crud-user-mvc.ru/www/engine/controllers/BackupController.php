@@ -16,9 +16,7 @@ class BackupController extends CController {
         if($_POST['BACKUP']["STEP"]==2) {
             global $zip;
             $zip = new ZipArchive;
-//снова используем метод open(), но теперь используем ключ ZipArchive::CREATE
-//который говорит, что архив нужно создать
-//а первым параметром передаем название архива
+
             $res = $zip->open($_SERVER["DOCUMENT_ROOT"].'/backups/backup-'.time().'.zip', ZipArchive::CREATE);
             if ($res === TRUE) {
                 $dir = $_SERVER["DOCUMENT_ROOT"];
@@ -31,7 +29,6 @@ class BackupController extends CController {
                             if(is_dir($full) && ("." != $file) && (".." != $file)) {
                                 $SubdirList[] = $full;
                             } elseif(is_file($full)) {
-                                //тут все просто: говорим, какой файл добавить в архив
                                 $zip->addFile(str_replace($_SERVER["DOCUMENT_ROOT"],"",$full));
                             }
                         }
