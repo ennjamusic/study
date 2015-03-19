@@ -4,6 +4,18 @@ body {
     background-color: #e1dca8;
 }
 
+
+.loginForm {
+    /*align-content: center;*/
+    background-color: snow;
+    border-radius: 5px;
+    margin: 300px auto;
+    padding: 5px;
+    height: 50px;
+    border: 1px solid;
+    width: 300px;
+}
+
 .wrapper {
     width: 100%;
     margin: 100px auto;

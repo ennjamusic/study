@@ -23,3 +23,7 @@ define("HFURL_ON",true);
 
 /*----- Logs -----*/
 define("LOGS_ON",true);
+
+/*----- Generator MVC ------*/
+define("GMVC_ON",true);
+define("GMVC_PASSWORD","123123");
