@@ -21,6 +21,6 @@ if(!empty($_POST["url"])) {
         $db->insertShortCodeById($id_url,$short_code);
     }
 
-    echo 'http://' . $_SERVER['HTTP_HOST'] . '/' .$short_code;
+    echo 'http://' . $_SERVER['HTTP_HOST'] . '/' .$short_code . "<br />";
 
 }
