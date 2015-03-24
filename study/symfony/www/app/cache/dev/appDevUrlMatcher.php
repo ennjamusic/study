@@ -127,6 +127,28 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/blog')) {
+            // blog_blog_homepage
+            if (rtrim($pathinfo, '/') === '/blog') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'blog_blog_homepage');
+                }
+
+                return array (  '_controller' => 'blog\\BlogBundle\\Controller\\DefaultController::indexAction',  '_route' => 'blog_blog_homepage',);
+            }
+
+            // blog_blog_show
+            if (0 === strpos($pathinfo, '/blog/show') && preg_match('#^/blog/show/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'blog_blog_show')), array (  '_controller' => 'blog\\BlogBundle\\Controller\\DefaultController::showAction',));
+            }
+
+            // blog_blog_add
+            if ($pathinfo === '/blog/add') {
+                return array (  '_controller' => 'blog\\BlogBundle\\Controller\\DefaultController::addAction',  '_route' => 'blog_blog_add',);
+            }
+
+        }
+
         // acme_hello_homepage
         if (0 === strpos($pathinfo, '/hello') && preg_match('#^/hello/(?P<name>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'acme_hello_homepage')), array (  '_controller' => 'Acme\\HelloBundle\\Controller\\DefaultController::indexAction',));

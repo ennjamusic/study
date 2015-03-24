@@ -1,0 +1,17 @@
+blog\BlogBundle\Entity\Post:
+    type: entity
+    table: posts
+    repositoryClass: blog\BlogBundle\Entity\PostRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        text:
+            type: text
+    lifecycleCallbacks: {  }

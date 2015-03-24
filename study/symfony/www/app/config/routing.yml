@@ -1,3 +1,7 @@
+blog_blog:
+    resource: "@blogBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
 acme_hello:
     resource: "@AcmeHelloBundle/Resources/config/routing.yml"
     prefix:   /
