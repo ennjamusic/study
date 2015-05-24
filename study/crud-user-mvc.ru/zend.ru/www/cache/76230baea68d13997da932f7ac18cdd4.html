@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MyApplication | Пользователь</title>
+    <link href="/engine/templates/newTemplate/css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body><div class="column1">
+    <ul class="menu">
+        <li><a href="/user/create/">Создать пользователя</a></li>
+        <li><a href="/user/index/">Показать всех пользователей</a></li>
+        <li><a href="/translate/index/">Перевести слово</a></li>
+        <li><a href="/site/settings/">Настройки</a></li>
+    </ul>
+</div>
+<div class="column2">
+
+<form method="post" action="">
+    <table class="changeUser">
+        <tr>
+            <td>Логин:</td>
+            <td><input type="text" name="user[login]" value="admin"></td>
+        </tr>
+        <tr>
+            <td>Роль:</td>
+            <td>
+                <select name="user[role]">
+                    <option value="1" selected>Администратор</option>
+                    <option value="0"  >Пользователь</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Имя:</td>
+            <td><input type="text" name="user[name]" value="Dmitry123"></td>
+        </tr>
+        <tr>
+            <td>Фамилия:</td>
+            <td><input type="text" name="user[lastname]" value="Telepnev2"></td>
+        </tr>
+        <tr>
+            <td>Электронная почта:</td>
+            <td><input type="text" name="user[email]" value="test@test.ru"></td>
+        </tr>
+        <tr>
+            <td>Телефон:</td>
+            <td><input type="text" name="user[phone]" value="123123123"></td>
+        </tr>
+        <tr>
+            <td>Дата регистрации</td>
+            <td>2015-04-14 22:04:32</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="save" value="Сохранить"></td>
+        </tr>
+    </table>
+</form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Не подключился класс UserModule в файле /home/dmitry/sites/zend.ru/www/engine/protected/core/base/CFiles.php в строке #36
+
+Не подключился класс UserModule в файле /home/dmitry/sites/zend.ru/www/engine/protected/core/base/CFiles.php в строке #37
+
