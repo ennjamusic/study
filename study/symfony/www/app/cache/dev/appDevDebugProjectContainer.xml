@@ -18,6 +18,7 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="AcmeHelloBundle">Acme\HelloBundle\AcmeHelloBundle</parameter>
+      <parameter key="blogBlogBundle">blog\BlogBundle\blogBlogBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
@@ -30,8 +31,8 @@
     <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
     <parameter key="database_name">symfony</parameter>
-    <parameter key="database_user">root</parameter>
-    <parameter key="database_password">null</parameter>
+    <parameter key="database_user">symfony</parameter>
+    <parameter key="database_password">123123</parameter>
     <parameter key="mailer_transport">smtp</parameter>
     <parameter key="mailer_host">127.0.0.1</parameter>
     <parameter key="mailer_user">null</parameter>
@@ -2447,8 +2448,8 @@
         <argument key="host">127.0.0.1</argument>
         <argument key="port">null</argument>
         <argument key="dbname">symfony</argument>
-        <argument key="user">root</argument>
-        <argument key="password">null</argument>
+        <argument key="user">symfony</argument>
+        <argument key="password">123123</argument>
         <argument key="charset">UTF8</argument>
         <argument key="driverOptions" type="collection"/>
       </argument>
@@ -2523,7 +2524,9 @@
       <argument type="service">
         <service class="Doctrine\ORM\Configuration" public="false">
           <call method="setEntityNamespaces">
-            <argument type="collection"/>
+            <argument type="collection">
+              <argument key="blogBlogBundle">blog\BlogBundle\Entity</argument>
+            </argument>
           </call>
           <call method="setMetadataCacheImpl">
             <argument type="service" id="doctrine_cache.providers.doctrine.orm.default_metadata_cache"/>
@@ -2536,7 +2539,21 @@
           </call>
           <call method="setMetadataDriverImpl">
             <argument type="service">
-              <service class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false"/>
+              <service class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\SimplifiedYamlDriver" public="false">
+                      <argument type="collection">
+                        <argument key="/home/dmitry/sites/crud.ru/www/src/blog/BlogBundle/Resources/config/doctrine">blog\BlogBundle\Entity</argument>
+                      </argument>
+                      <call method="setGlobalBasename">
+                        <argument>mapping</argument>
+                      </call>
+                    </service>
+                  </argument>
+                  <argument>blog\BlogBundle\Entity</argument>
+                </call>
+              </service>
             </argument>
           </call>
           <call method="setProxyDir">
@@ -2983,6 +3000,10 @@
       <call method="addPath">
         <argument>/home/dmitry/sites/crud.ru/www/src/Acme/HelloBundle/Resources/views</argument>
         <argument>AcmeHello</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/dmitry/sites/crud.ru/www/src/blog/BlogBundle/Resources/views</argument>
+        <argument>blogBlog</argument>
       </call>
       <call method="addPath">
         <argument>/home/dmitry/sites/crud.ru/www/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>

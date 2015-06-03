@@ -1,0 +1,73 @@
+body {
+    background-color: #F1F1FA!important;
+}
+
+.second-form {
+    display: none;
+}
+
+.wrapper-form {
+    width : 50%;
+    margin: 0 auto;
+}
+
+input {
+    width: 230px;
+}
+
+textarea {
+    width: 230px;
+    height: 40px;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.hidden-submit.btn {
+    display: none;
+}
+
+.response{
+    padding: 20px;
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 400px;
+    min-height: 100px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.validation-message, .list-requests {
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 400px;
+    min-height: 100px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.validation-message .messages {
+    min-height: 80px;
+}
+
+.validation-message-close {
+    float: right;
+}
+
+fieldset legend {
+  background-color: #d9d9fd;
+  /* border-bottom: 1px solid; */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+}
