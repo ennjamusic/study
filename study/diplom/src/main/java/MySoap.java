@@ -67,7 +67,7 @@ public class MySoap {
                 "                                    to_foiv_name=\"МВД России\" to_system=\"АИС МВД\" to_system_id=\"8\" version=\"1.1\">\n" +
                 "                            <ns8:InitialRegNumber regtime=\""+dat+"\">6063424415381\n" +
                 "                            </ns8:InitialRegNumber>\n" +
-                "                            <ns8:Service code=\"3\"/>\n" +
+                "                            <ns8:Service code=\"3\" name=\"experiance\" />\n" +
                 "                            <ns8:Reason>12345678911</ns8:Reason>\n" +
                 "                            <ns8:Originator code=\"MVDR01001\" fio=\"" + params.get(0) + "\"\n" +
                 "                                            name=\"МВД России\" region=\"074\"/>\n" +
@@ -201,6 +201,100 @@ public class MySoap {
 //        Document xmlData = reader.read(new StringReader(xmlString));
 //        return xmlData;
 
+    }
+
+
+
+    public String requestId (String id) {
+        String xml = "<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\"\n" +
+                "            xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd\"\n" +
+                "            xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\">\n" +
+                "    <S:Header>\n" +
+                "        <wsse:Security S:actor=\"http://smev.gosuslugi.ru/actors/smev\">\n" +
+                "            <ds:Signature xmlns:ds=\"http://www.w3.org/2000/09/xmldsig#\">\n" +
+                "                <ds:SignedInfo>\n" +
+                "                    <ds:CanonicalizationMethod Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/>\n" +
+                "                    <ds:SignatureMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#gostr34102001-gostr3411\"/>\n" +
+                "                    <ds:Reference URI=\"#body\">\n" +
+                "                        <ds:Transforms>\n" +
+                "                            <ds:Transform Algorithm=\"http://www.w3.org/2001/10/xml-exc-c14n#\"/>\n" +
+                "                        </ds:Transforms>\n" +
+                "                        <ds:DigestMethod Algorithm=\"http://www.w3.org/2001/04/xmldsig-more#gostr3411\"/>\n" +
+                "                        <ds:DigestValue>tIXljfoAsP7toihlv4bkoNQFmQj43prBu6DepMC6aPQ=</ds:DigestValue>\n" +
+                "                    </ds:Reference>\n" +
+                "                </ds:SignedInfo>\n" +
+                "                <ds:SignatureValue>\n" +
+                "                    ZlqrWH7bvIICbJH6OGwh1hQrfkWkkYUXVDog1iUc5SNnqSbEy26lC1WnCs0VdKfXfYZixRRqgfK9yD7dXPLj9g==\n" +
+                "                </ds:SignatureValue>\n" +
+                "                <ds:KeyInfo>\n" +
+                "                    <wsse:SecurityTokenReference>\n" +
+                "                        <wsse:Reference URI=\"#SenderCertificate\"\n" +
+                "                                        ValueType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3\"/>\n" +
+                "                    </wsse:SecurityTokenReference>\n" +
+                "                </ds:KeyInfo>\n" +
+                "            </ds:Signature>\n" +
+                "            <wsse:BinarySecurityToken\n" +
+                "                    EncodingType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary\"\n" +
+                "                    ValueType=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3\"\n" +
+                "                    wsu:Id=\"SenderCertificate\">\n" +
+                "                MIIEKzCCA9qgAwIBAgIKXfj8iAABAAALzDAIBgYqhQMCAgMwfzELMAkGA1UEBhMCUlUxFTATBgNVBAcMDNCc0L7RgdC60LLQsDEcMBoGA1UECgwT0JzQktCUINCg0L7RgdGB0LjQuDEpMCcGA1UECwwg0JPQptCh0LjQl9CYINCc0JLQlCDQoNC+0YHRgdC40LgxEDAOBgNVBAMTB0hFQUQgQ0EwHhcNMTIwNjI2MTExOTAwWhcNMTMwNjI2MTEyMzAwWjBHMQswCQYDVQQGEwJSVTEdMBsGA1UECh4UBBwEEgQUACAEIAQ+BEEEQQQ4BDgxGTAXBgNVBAMeEAQSBBgEIQAtBCEEHAQtBBIwYzAcBgYqhQMCAhMwEgYHKoUDAgIkAAYHKoUDAgIeAQNDAARAapuPpkSMPQdhXlvVo0bV+Rx2fjHw2EZcA0iT8vGgmfoAaLqRTbErJVy1obSfwYhQAXWSJo4gEhFkk7mcVw0UpqOCAmwwggJoMA4GA1UdDwEB/wQEAwIE8DAZBgkqhkiG9w0BCQ8EDDAKMAgGBiqFAwICFTAuBgNVHSUEJzAlBggrBgEFBQcDBAYGKoUDBQEBBgcqhQMCAiIGBggrBgEFBQcDAjAdBgNVHQ4EFgQUqFInUTSSNsbmZZY0C+oLAm+J9bQwHwYDVR0jBBgwFoAUqfiHMEJgPZwOaXkSG1qFwLtKY4AwgeMGA1UdHwSB2zCB2DCB1aCB0qCBz4ZCaHR0cDovL2NkcC5tdmQucnUvY3JsL2E5Zjg4NzMwNDI2MDNkOWMwZTY5NzkxMjFiNWE4NWMwYmI0YTYzODAuY3JshkNodHRwOi8vY2RwMi5tdmQucnUvY3JsL2E5Zjg4NzMwNDI2MDNkOWMwZTY5NzkxMjFiNWE4NWMwYmI0YTYzODAuY3JshkRodHRwOi8vd3d3LnVjbXZkLnJ1L2NybC9hOWY4ODczMDQyNjAzZDljMGU2OTc5MTIxYjVhODVjMGJiNGE2MzgwLmNybDCBpgYIKwYBBQUHAQEEgZkwgZYwLwYIKwYBBQUHMAKGI2h0dHA6Ly9jZHAubXZkLnJ1L2NlcnQvSEVBRF9NVkQuY3J0MDAGCCsGAQUFBzAChiRodHRwOi8vY2RwMi5tdmQucnUvY2VydC9IRUFEX01WRC5jcnQwMQYIKwYBBQUHMAKGJWh0dHA6Ly93d3cudWNtdmQucnUvY2VydC9IRUFEX01WRC5jcnQwPAYJKwYBBAGCNxUKBC8wLTAKBggrBgEFBQcDBDAIBgYqhQMFAQEwCQYHKoUDAgIiBjAKBggrBgEFBQcDAjAIBgYqhQMCAgMDQQDMQvW99ZiIgl9Fj59nHUBxlZr6XfDPsDVM0kr7ZcX1CT1kT71jFLf2yFKUZWXEDwCy1kN+iTZzhusATGTBKkQD\n" +
+                "            </wsse:BinarySecurityToken>\n" +
+                "        </wsse:Security>\n" +
+                "    </S:Header>\n" +
+                "    <S:Body wsu:Id=\"body\">\n" +
+                "        <RequestID xmlns=\"http://smev.gosuslugi.ru/rev111111\" xmlns:ns10=\"http://tower.ru/mvd/clients/pl/response\"\n" +
+                "                   xmlns:ns11=\"http://tower.ru/mvd/clients/common/requestID\"\n" +
+                "                   xmlns:ns2=\"http://www.w3.org/2000/09/xmldsig#\" xmlns:ns3=\"http://tower.ru/mvd/clients/wpe/unloadList\"\n" +
+                "                   xmlns:ns4=\"http://www.w3.org/2004/08/xop/include\"\n" +
+                "                   xmlns:ns5=\"http://tower.ru/mvd/clients/wpe/unload/request\"\n" +
+                "                   xmlns:ns6=\"http://tower.ru/mvd/clients/wpe/unloadList/request\"\n" +
+                "                   xmlns:ns7=\"http://tower.ru/mvd/clients/wpe/unload\" xmlns:ns8=\"http://tower.ru/mvd/clients/pl/request\"\n" +
+                "                   xmlns:ns9=\"http://tower.ru/mvd/clients/common/responseID\">\n" +
+                "            <Message>\n" +
+                "                <Sender>\n" +
+                "                    <Code>MVDR01001</Code>\n" +
+                "                    <Name>МВД России</Name>\n" +
+                "                </Sender>\n" +
+                "                <Recipient>\n" +
+                "                    <Code>MVDR01001</Code>\n" +
+                "                    <Name>МВД России</Name>\n" +
+                "                </Recipient>\n" +
+                "                <Originator>\n" +
+                "                    <Code>MVDR01001</Code>\n" +
+                "                    <Name>МВД России</Name>\n" +
+                "                </Originator>\n" +
+                "                <TypeCode>GSRV</TypeCode>\n" +
+                "                <Status>PING</Status>\n" +
+                "                <Date>2012-08-27T12:49:42.557+04:00</Date>\n" +
+                "                <ExchangeType>2</ExchangeType>\n" +
+                "                <RequestIdRef>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</RequestIdRef>\n" +
+                "                <OriginRequestIdRef>xxxxxxxx-xxxx-xxxx-xxxx-697742704698</OriginRequestIdRef>\n" +
+                "                <ServiceCode>12345678911</ServiceCode>\n" +
+                "                <CaseNumber>6063424415381</CaseNumber>\n" +
+                "                <REQUESTID>"+id+"</REQUESTID>\n" +
+                "            </Message>\n" +
+                "            <MessageData>\n" +
+                "                <AppData>\n" +
+                "                    <ns11:Message>\n" +
+                "                        <ns11:Header from_foiv_id=\"MVDR01001\" from_foiv_name=\"МВД России\" from_system=\"АИС ФМС\"\n" +
+                "                                     from_system_id=\"3\" msg_type=\"REQUEST_ID\" msg_vid=\"EXPERIENCE1\"\n" +
+                "                                     to_foiv_id=\"MVDR01001\" to_foiv_name=\"МВД России\" to_system=\"АИС МВД\"\n" +
+                "                                     to_system_id=\"8\" version=\"1.1\">\n" +
+                "                            <ns11:InitialRegNumber regtime=\"2012-08-27T12:49:42.558+04:00\">6063424415381\n" +
+                "                            </ns11:InitialRegNumber>\n" +
+                "                            <ns11:Service code=\"3\"/>\n" +
+                "                            <ns11:Reason>12345678911</ns11:Reason>\n" +
+                "                            <ns11:Originator code=\"MVDR01001\" fio=\"Петрова И.А., тел. (351) 232-3456\" name=\"МВД России\"\n" +
+                "                                             region=\"074\"/>\n" +
+                "                            <ns11:RegNumber regtime=\"2012-08-27T12:49:42.558+04:00\">3003000</ns11:RegNumber>\n" +
+                "                        </ns11:Header>\n" +
+                "                    </ns11:Message>\n" +
+                "                </AppData>\n" +
+                "            </MessageData>\n" +
+                "        </RequestID>\n" +
+                "    </S:Body>\n" +
+                "</S:Envelope>";
+        return xml;
     }
 
 

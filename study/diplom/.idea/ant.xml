@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AntConfiguration">
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/common.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/dictionaries.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/header.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/include.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/plCommon.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/PLService.wsdl" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/request.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/request_ID.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/request_PL.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/response.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/response_ID.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/response_PL.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/smev_ext_common.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/smev_ext_pl.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/smev_rev111111.xsd" />
+    <buildFile url="file://$USER_HOME$/Рабочий стол/Схемы сервиса о службе 12.07.2012/xmldsig-core-schema.xsd" />
+  </component>
+</project>
