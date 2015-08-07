@@ -1,5 +1,6 @@
 body {
     /*background-color: #909aa2;*/
+<<<<<<< HEAD
     background: radial-gradient(circle farthest-side at 650px 380px, #adbb16, #a0451a);
     min-height: 600px;
 }
@@ -12,13 +13,26 @@ ul * {
 .column1 {
     float: right;
     width: 15%;
+=======
+    background: radial-gradient(circle farthest-side at 650px 380px, #b4bb2a, #875029);
+    min-height: 600px;
+}
+
+.column1 {
+    float: right;
+    width: 10%;
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
     margin-top: 50px;
     background-color: seashell;
 }
 
 .column2 {
     float: left;
+<<<<<<< HEAD
     width: 84%;
+=======
+    width: 89%;
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
 }
 
 .loginForm {

@@ -3,22 +3,36 @@
 class UserController extends CController {
 
     public function indexAction() {
+<<<<<<< HEAD
         CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('allUsers'));
+=======
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
             $arrResult = $model->findAll();
             $this->render("viewList","user",$arrResult);
         } else {
+<<<<<<< HEAD
             CApp::redirect("/");
+=======
+            global $errMessages;
+            global $langArray;
+            $errMessages[] = $langArray["accessDenied"];
+            CMain::redirect("/");
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
         }
     }
 
     public function viewAction() {
+<<<<<<< HEAD
         CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('user'));
+=======
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
             $id = filterGetValue($_GET["id"]);
             $arrResult = $model->findById($id);
+<<<<<<< HEAD
             if(!empty($_POST["user"])) {
                 $userNewInfo = array();
                 foreach($_POST["user"] as $key=>$value) {
@@ -30,11 +44,22 @@ class UserController extends CController {
             $this->render("view","user",$arrResult);
         } else {
             CApp::redirect("/");
+=======
+            $this->render("view","user",$arrResult);
+        } else {
+            global $errMessages;
+            global $langArray;
+            $errMessages[] = $langArray["accessDenied"];
+            CMain::redirect("/");
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
         }
     }
 
     public function createAction() {
+<<<<<<< HEAD
         CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('createUser'));
+=======
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             $model = new UserModel();
             if(!empty($_POST["user"])) {
@@ -45,7 +70,14 @@ class UserController extends CController {
             }
             $this->render("create","user");
         } else {
+<<<<<<< HEAD
             CApp::redirect("/");
+=======
+            global $errMessages;
+            global $langArray;
+            $errMessages[] = $langArray["accessDenied"];
+            CMain::redirect("/");
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
         }
     }
 
@@ -54,9 +86,18 @@ class UserController extends CController {
             $model = new UserModel();
             $id = filterGetValue($_GET["id"]);
             $model->deleteById($id);
+<<<<<<< HEAD
             CApp::redirect(CApp::getLink(array("controller"=>"user", "view"=>"index")));
         } else {
             CApp::redirect("/");
+=======
+            CMain::redirect(CMain::getLink(array("controller"=>"user", "view"=>"index")));
+        } else {
+            global $errMessages;
+            global $langArray;
+            $errMessages[] = $langArray["accessDenied"];
+            CMain::redirect("/");
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
         }
     }
 
