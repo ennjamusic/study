@@ -3,18 +3,31 @@
 class SiteController extends CController {
 
     public function indexAction() {
+<<<<<<< HEAD
 
         CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('enter'));
+=======
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
         if(isset($_POST["loginForm"]) && !empty($_POST["loginForm"])) {
             $login = filterGetValue($_POST["loginForm"]["login"]);
             $password = filterGetValue($_POST["loginForm"]["password"]);
             $model = new UserModel();
             if(!$model->login($login,$password)) {
+<<<<<<< HEAD
                 $errMessages[] = CApp::getTranslate("accessDenied");
             } else {
                 $link = CApp::getLink(array("controller"=>"user",
                                             "view"=>"index"));
                 CApp::redirect($link);
+=======
+                global $errMessages;
+                global $langArray;
+                $errMessages[] = $langArray["accessDenied"];
+            } else {
+                $link = CMain::getLink(array("controller"=>"user",
+                                            "view"=>"index"));
+                CMain::redirect($link);
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
             }
         }
         $this->render("login","user");
@@ -24,6 +37,7 @@ class SiteController extends CController {
         UserModel::logout();
     }
 
+<<<<<<< HEAD
     public function settingsAction() {
         if($_SESSION["userRole"]==USER_ROLE_ADMIN) {
             CApp::setTitle(CApp::getAppName()." | ".CApp::getTranslate('settings'));
@@ -72,6 +86,10 @@ class SiteController extends CController {
 
         }
         $this->render("register","user");
+=======
+    public function registerAction($userInfoArray) {
+        $model = new CModelConnectDB(DSN,DB_USER_NAME,DB_USER_PASS);
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
     }
 
 } 

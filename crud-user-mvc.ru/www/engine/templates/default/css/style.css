@@ -6,14 +6,22 @@ body {
 
 .column1 {
     float: left;
+<<<<<<< HEAD
     width: 15%;
+=======
+    width: 10%;
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
     margin-top: 50px;
     background-color: seashell;
 }
 
 .column2 {
     float: right;
+<<<<<<< HEAD
     width: 84%;
+=======
+    width: 89%;
+>>>>>>> ac79de2de9019914f8288aba14b731be14e8b101
 }
 
 .loginForm {
