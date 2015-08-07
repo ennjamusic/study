@@ -1,0 +1,60 @@
+body {
+    /*background-color: #909aa2;*/
+    background: radial-gradient(circle farthest-side at 650px 380px, #adbb16, #a0451a);
+    min-height: 600px;
+}
+
+ul * {
+    margin: 0;
+    padding: 0;
+}
+
+.column1 {
+    float: right;
+    width: 15%;
+    margin-top: 50px;
+    background-color: seashell;
+}
+
+.column2 {
+    float: left;
+    width: 84%;
+}
+
+.loginForm {
+    background-color: snow;
+    border-radius: 5px;
+    margin: 300px auto;
+    height: 100px;
+    border: 1px solid;
+}
+
+.userList{
+    background-color: snow;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.changeUser {
+    background-color: snow;
+    margin: 50px auto;
+    border-radius: 5px;
+}
+
+.pagin * {
+    list-style-type: none;
+    display: inline;
+}
+
+.success {
+    background-color: #00bf00;
+}
+
+.table-head {
+    background-color: #bcbcbc;
+}
+
+.errMessages {
+    background-color: rgba(255, 33, 26, 0.73);
+    /*border-radius: 10px;*/
+}
