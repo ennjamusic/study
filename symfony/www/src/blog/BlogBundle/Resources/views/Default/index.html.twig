@@ -1,0 +1,9 @@
+{% extends '::base.html.twig' %}
+
+ {% block body %}
+        {% for product in products %}
+
+            <a href="show/{{ product.id }}"><h3>{{ product.title }}</h3></a>
+            <hr />
+        {% endfor %}
+ {% endblock %}
