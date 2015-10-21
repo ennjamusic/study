@@ -1,0 +1,2 @@
+Проблема с подключением к БД SQLSTATE[28000] [1045] Access denied for user 'crudUserTest'@'localhost' (using password: YES) в файле /home/GitHub/study/study/framework_v0.3.ru/www/engine/protected/core/db/CModelConnectDB.php в строке #51
+
